@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Klar Data Exporter",
+    "version": "1.0",
+    "description": "Extracts KPIs and exports them to CSV.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["https://app.getklar.com/app/overview*"],
+    "content_scripts": [
+      {
+        "matches": ["https://app.getklar.com/app/overview*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_title": "Klar Exporter"
+    }
+  }
+  
